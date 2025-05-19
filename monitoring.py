@@ -31,8 +31,6 @@ def get_service():
 
 service = get_service()
 
-# --- Membaca Data dari Sheet (dengan cache) ---
-@st.cache_data(ttl=28800, show_spinner=False)  # cache selama 1 jam, bisa diubah sesuai kebutuhan
 def read_sheet(SHEET_NAME):
     try:
         result = service.spreadsheets().values().get(
